@@ -9,36 +9,78 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.black,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                color: Colors.red,
-                width: 100,
+              CircleAvatar(
+                backgroundImage: AssetImage('images/Alley2.png'),
+                backgroundColor: Colors.red,
+                radius: 50,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.green,
-                    ),
-                  ],
+              Text(
+                'Allan Davis',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40
                 ),
-              Container(
-                width: 100,
-                color: Colors.blue,
+              ),
+              Text(
+                'CHIEF TECHNOLOGY MAGE',
+                style: TextStyle(
+                  color: Colors.red[600],
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20,
+                  letterSpacing: 2.5
+                ),
+              ),
+              SizedBox(
+                width: 250,
+                height: 20,
+                child: Divider(color: Colors.red,),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                  title: Text('404-926-6878',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20,
+                      ),
+                    ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    
+                  title: Text('alley@shadeauxmedia.com',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20,
+                      ),
+                    ),
+                  
+                ),
               ),
             ],
-        ),
+          ),
         ),
       ),
     );
